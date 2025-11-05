@@ -246,22 +246,6 @@
         </div>
     </div>
 
-
-    <section class="w3l-about-breadcrumb">
-        <div class="breadcrumb-bg breadcrumb-bg-about">
-            <div class="container py-5">
-                <div class="w3breadcrumb-gids text-center py-sm-5 py-4">
-                    <div class="w3breadcrumb-info">
-                        <h2 class="w3ltop-title">Living Rooms</h2>
-                    </div>
-                    <ul class="breadcrumbs-custom-path">
-                        <li><a href="AcFurnitureHome.html">Home</a></li>
-                        <li class="active"><span class="fas fa-angle-right mx-2"></span>Living Rooms</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Cart Items section -->
     <section class="cart-page-section py-5">
         <div class="container">
@@ -333,6 +317,65 @@
         </div>
     </section>
     <!-- // Cart Items section -->
+    <!-- CART DRAWER (Right Side) -->
+    <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">
+                <i class="bi bi-bag-check"></i> Your Cart
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Cart items -->
+            <div class="cart-items flex-grow-1 overflow-auto pe-1">
+                <div class="cart-item d-flex align-items-center mb-3">
+                    <a href="product.html" class="cart-img-link">
+                        <img src="assets/images/livingRoom-01.jpg" alt="Product" class="cart-thumb me-3">
+                    </a>
+                    <div class="cart-info flex-grow-1">
+                        <a href="product-page.html" class="cart-item-title">
+                            Modern Lamp
+                        </a>
+                        <p class="mb-0">Qty: 1</p>
+                        <p class="fw-semibold mb-0">$89.00</p>
+                    </div>
+                    <button class="btn btn-sm btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
+                <hr class="border-secondary">
+                <div class="cart-item d-flex align-items-center mb-3">
+                    <a href="product.html" class="cart-img-link">
+                        <img src="assets/images/livingRoom-02.jpg" alt="Product" class="cart-thumb me-3">
+                    </a>
+                    <div class="cart-info flex-grow-1">
+                        <a href="product-page.html" class="cart-item-title">
+                            Wooden Table
+                        </a>
+                        <p class="mb-0 ">Qty: 1</p>
+                        <p class="fw-semibold mb-0">$249.00</p>
+                    </div>
+                    <button class="btn btn-sm btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+
+            <!-- Cart summary -->
+            <div class="cart-summary mt-3 border-top pt-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold">Subtotal:</span>
+                    <span class="fw-bold text-warning">$338.00</span>
+                </div>
+            </div>
+
+            <!-- Fixed bottom buttons -->
+            <div class="cart-footer mt-auto pt-3 border-top">
+                <div class="d-flex gap-2">
+                    <a href="checkout.html" class="btn btn-primary-custom flex-fill">Checkout</a>
+                    <a href="cart.html" class="btn btn-outline-custom flex-fill">Go to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // CART DRAWER (Right Side) -->
     <!-- footer -->
     <section class="w3l-footer-29-main border-0">
         <div class="footer-29 py-5">
@@ -413,6 +456,16 @@
         }
     </script>
     <!-- //move top -->
+    <!--cart-->
+    <script>
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cartDrawer = new bootstrap.Offcanvas('#cartDrawer');
+                cartDrawer.show();
+            });
+        });
+    </script>
+    <!--cart-->
     <script>
         // Example quantity buttons logic
         document.querySelectorAll('.increment').forEach(btn => {
@@ -428,7 +481,6 @@
             });
         });
     </script>
-
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- bootstrap -->

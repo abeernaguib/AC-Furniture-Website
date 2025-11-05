@@ -6512,69 +6512,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* =====================
-   MOBILE MODAL BOTTOM SHEET
-===================== */
-
-
-/* Default Bootstrap modal centers vertically — we override that below */
-/*@media (max-width: 768px) {
-
-    .account-modal {
-        z-index: 1060;
-    }
-    .modal.account-modal .modal-dialog {
-        position: fixed;
-        bottom: 0;
-        margin: 0;
-        left: 0;
-        right: 0;
-        transform: none !important;*/ /* cancel translateY centering */
-        /*width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-
-
-    .modal.account-modal .modal-content {
-        bottom:0;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border: none;
-        background-color: var(--dark);
-        color: var(--offwhite);
-        padding: 1rem;
-        animation: slideUp 0.3s ease-out;
-    }
-
-    .modal.account-modal .modal-body a {
-        display: block;
-        color: var(--offwhite);
-        padding: 0.75rem 0;
-        font-size: 1rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        text-decoration: none;
-    }
-
-        .modal.account-modal .modal-body a:hover {
-            color: var(--primary);
-        }*/
-
-    /* Slide-up animation */
-    /*@keyframes slideUp {
-        from {
-            transform: translateY(100%);
-        }
-
-        to {
-            transform: translateY(0);
-        }
-    }
-}*/
-
-/* ===== Offcanvas ===== */
-
 /* ===================================
    FIX: Offcanvas above fixed header & nav
 =================================== */
@@ -6803,6 +6740,236 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     box-shadow: 0 0 10px rgba(224, 178, 58, 0.3);
 }
+
+/* ---- Edit Profile Layout ---- */
+.edit-profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 180px auto 80px; /* space below fixed header */
+    gap: 2rem;
+    padding: 0 1rem;
+}
+/* ===========================
+   🌟 EDIT PROFILE PAGE STYLE
+   =========================== */
+
+/* === Page Wrapper === */
+.profile-page {
+    margin-top: 160px;
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+}
+
+/* === Profile Sidebar === */
+.profile-sidebar {
+    background-color: var(--dark);
+    color: var(--offwhite);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+}
+
+    .profile-sidebar h5 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0.5rem;
+        color: var(--offwhite);
+    }
+
+    .profile-sidebar .nav-link {
+        color: var(--offwhite);
+        font-weight: 500;
+        padding: 0.6rem 0.8rem;
+        border-radius: 6px;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+        .profile-sidebar .nav-link:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .profile-sidebar .nav-link.active {
+            background-color: var(--primary);
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+/* === Profile Sections === */
+.profile-section {
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+    .profile-section .section-title {
+        font-weight: 600;
+        color: var(--dark);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* === Labels and Inputs === */
+    .profile-section .form-label {
+        color: var(--dark);
+        font-weight: 500;
+    }
+
+    .profile-section input {
+        border-radius: 6px;
+        font-size: 0.95rem;
+    }
+
+        .profile-section input[readonly] {
+            background-color: #e9ecef;
+            color: #777;
+            cursor: not-allowed;
+        }
+
+/* === Password + Change Password Inline === */
+.password-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .password-label .change-pass-link {
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: color 0.3s ease;
+    }
+
+        .password-label .change-pass-link:hover {
+            color: var(--dark);
+            text-decoration: underline;
+        }
+
+/* === Buttons === */
+.profile-section .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+    .profile-section .btn-primary:hover {
+        background-color: #ffda7a;
+        color: var(--dark);
+    }
+
+/* === Account Deletion === */
+.profile-section .text-danger {
+    color: #d9534f !important;
+    font-weight: 500;
+}
+
+/* === Modal (Change Password) === */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    background-color: #f8f9fa;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--dark);
+    border-bottom: none;
+}
+
+.modal-title {
+    color: var(--offwhite);
+    font-weight: 600;
+}
+
+.modal-body .form-label {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.modal-body input {
+    border-radius: 6px;
+}
+
+.modal-footer .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    font-weight: 600;
+}
+
+/* === Responsive === */
+@media (max-width: 991.98px) {
+    .profile-sidebar {
+        display: none;
+    }
+
+    .profile-section {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Delete Account Modal Style ===== */
+#deleteAccountModal .modal-header {
+    background-color: var(--dark);
+    border-bottom: none;
+}
+
+#deleteAccountModal .modal-title {
+    color: var(--offwhite);
+    font-weight: 600;
+}
+
+#deleteAccountModal .modal-body {
+    background-color: #f8f9fa; /* light background for form area */
+    color: var(--dark);
+}
+
+#deleteAccountModal .form-label {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+#deleteAccountModal .form-control {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+}
+
+#deleteAccountModal .modal-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+}
+
+#deleteAccountModal .btn-secondary {
+    background-color: var(--dark);
+    border: none;
+    color: var(--offwhite);
+}
+
+#deleteAccountModal .btn-danger {
+    background-color: var(--primary);
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+    #deleteAccountModal .btn-danger:hover {
+        background-color: #ff4d4d; /* red hover for warning */
+        color: #fff;
+    }
+/* ---- Edit Profile Layout ---- */
 
 /* Gallery --- publisher 2021 */
 .w3l-banner.w3l-banner {
@@ -12572,6 +12739,12 @@ h2.w3ltop-title {
 /* ===== CART DRAWER ===== */
 
 /* ==== Cart Page ===== */
+
+.cart-page-section {
+    margin-top: 160px; /* keeps cart below fixed header + category bar */
+}
+
+
 .cart-page-section h1 {
     color: var(--primary);
 }
