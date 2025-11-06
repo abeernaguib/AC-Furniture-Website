@@ -6464,9 +6464,30 @@ h1, h2, h3, h4, h5, h6 {
         border: none;
         border-radius: 10px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        padding: 0;
+        padding: 10px; /* 👈 ensures equal space top/bottom, fixes offset */
+        text-align: center; /* 👈 centers button nicely */
         z-index: 2000;
     }
+
+
+
+        /* Ensure Sign In button fills dropdown width evenly */
+        .account-dropdown .dropdown-menu .btn {
+            display: block;
+            width: 80%;
+            margin: 0 auto; /* 👈 centers inside menu */
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+            /* Optional: smooth hover for consistency */
+            .account-dropdown .dropdown-menu .btn:hover {
+                background-color: var(--primary, #ffc107);
+                color: var(--dark, #000);
+            }
+   
 
     /* 🔹 Dropdown items */
     .account-dropdown .dropdown-item {
@@ -6501,14 +6522,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 /* 🔹 Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .account-dropdown .dropdown-menu {
         position: absolute !important;
         top: 100%;
-        left: 50% !important;
+        left: auto !important;
         transform: translateX(-50%) !important;
-        width: 90vw;
-        max-width: 350px;
+        min-width:200px;
+        /*width: 90vw;
+        max-width: 350px;*/
     }
 }
 
