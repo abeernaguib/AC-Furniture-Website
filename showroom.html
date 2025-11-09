@@ -21,6 +21,10 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+   
+    <style>
+      
+    </style>
 </head>
 <body>
     <!-- ===== MAIN HEADER ===== -->
@@ -246,77 +250,100 @@
         </div>
     </div>
 
-    <!-- Cart Items section -->
-    <section class="cart-page-section py-5">
-        <div class="container">
-            <h1 class="mb-4">Your Shopping Cart</h1>
+    <!-- Showroom section -->
+    <section class="showroom-hero d-flex align-items-center justify-content-center text-center">
+        <div class="overlay"></div>
+        <div class="content text-white">
+            <h1 class="fw-bold display-5 mb-3">Our Showrooms</h1>
+            <p class="lead">Experience the beauty of AC Furniture in person — where quality meets comfort.</p>
+        </div>
+    </section>
 
-            <div class="table-responsive">
-                <table class="table cart-table align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example cart item row -->
-                        <tr>
-                            <td class="product-info d-flex align-items-center">
-                                <a href="product.html" class="pe-3"><img src="assets/images/livingRoom-01.jpg" alt="Product" class="product-thumb"></a>
-                                <div>
-                                    <a href="product.html" class="product-title">Modern Lamp</a><br>
-                                    <span class="text-muted">Color: Walnut</span>
-                                </div>
-                            </td>
-                            <td class="product-price">€89.00</td>
-                            <td>
-                                <div class="input-group quantity-selector" style="max-width: 120px;">
-                                    <button class="btn btn-outline-secondary decrement" type="button">−</button>
-                                    <input type="number" class="form-control text-center qty-input" value="1" min="1">
-                                    <button class="btn btn-outline-secondary increment" type="button">+</button>
-                                </div>
-                            </td>
-                            <td class="product-total">€89.00</td>
-                            <td class="text-end">
-                                <button class="btn btn-sm btn-outline-light remove-item"><i class="bi bi-trash"></i></button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for additional items -->
-                    </tbody>
-                </table>
+    <!-- Showroom Locations -->
+    !-- ===== SHOWROOM LOCATION ===== -->
+    <section class="showrooms-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-uppercase section-title">Visit Our Showroom</h2>
+                <p class="text-muted mt-2 fw-medium">Experience AC Furniture firsthand at our exclusive showroom in Cairo.</p>
             </div>
 
-            <div class="row justify-content-end">
-                <div class="col-lg-5">
-                    <div class="cart-summary p-4 bg-light rounded">
-                        <h4 class="mb-3">Order Summary</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="summary-text">Subtotal</span>
-                            <span class="fw-bold summary-text">€89.00</span>
+            <!-- Down Arrow -->
+            <!-- Repeated Down Arrows -->
+            <a href="#showroom" class="scroll-down-multiple">
+                <i class="bi bi-chevron-down"></i>
+                <i class="bi bi-chevron-down"></i>
+                <i class="bi bi-chevron-down"></i>
+            </a>
+
+            <div class="row justify-content-center" id="showroom">
+                <!-- Cairo Showroom (Icon Version) -->
+                <div class="col-md-8 col-lg-6">
+                    <div class="showroom-card shadow-sm rounded-4 overflow-hidden h-100 text-center p-4">
+
+                        <!-- Icon Wrapper -->
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-geo-alt-fill"></i>
                         </div>
-                        <div class="d-flex justify-content-between mb-4">
-                            <span class="summary-text">Shipping</span>
-                            <span class="fw-bold summary-text">€0.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="fw-bold summary-text">Total</span>
-                            <span class="display-6 fw-bold">€89.00</span>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <a href="checkout.html" class="btn btn-primary-custom">Checkout</a>
-                            <a href="AcFurnitureHome.html" class="btn btn-outline-custom">Continue Shopping</a>
-                        </div>
+
+                        <h5 class="fw-bold text-dark mb-2">Cairo Showroom</h5>
+                        <p class="text-secondary small mb-3">Building No. 8, Panorama Al Jabal Al Akhdar Compound - Autostrad Road - Cairo</p>
+                        <p class="text-muted mb-1 fw-semibold"><i class="bi bi-telephone me-2"></i> +20 111 222 3333</p>
+                        <a href="https://maps.app.goo.gl/TgJSP5LQWae8HqyRA" target="_blank" class="btn btn-dark btn-sm rounded-pill mt-3 fw-semibold">Get Directions</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- // Cart Items section -->
+    <!--<section class="showrooms-section py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h2 class="fw-bold text-uppercase">Visit Our Showrooms</h2>
+                <p class="text-muted mt-2">Explore our exclusive locations and get inspired by our furniture collections.</p>
+            </div>
+
+            <div class="row g-4">-->
+    <!-- Showroom 1 -->
+    <!--<div class="col-md-6 col-lg-4">
+        <div class="showroom-card shadow-sm rounded-4 overflow-hidden h-100">
+            <img src="assets/images/showroom-cairo.jpg" class="w-100 showroom-img" alt="Cairo Showroom">
+            <div class="p-4">
+                <h5 class="fw-bold mb-2">Cairo Showroom</h5>
+                <p class="text-muted small mb-3">12 Abbas El Akkad Street, Nasr City</p>
+                <p class="text-muted mb-1"><i class="bi bi-telephone me-2"></i> +20 111 222 3333</p>
+                <a href="#" class="btn btn-outline-dark btn-sm mt-3">Get Directions</a>
+            </div>
+        </div>
+    </div>-->
+    <!-- Showroom 2 -->
+    <!--<div class="col-md-6 col-lg-4">
+        <div class="showroom-card shadow-sm rounded-4 overflow-hidden h-100">
+            <img src="assets/images/showroom-alex.jpg" class="w-100 showroom-img" alt="Alexandria Showroom">
+            <div class="p-4">
+                <h5 class="fw-bold mb-2">Alexandria Showroom</h5>
+                <p class="text-muted small mb-3">45 Stanley Street, Corniche</p>
+                <p class="text-muted mb-1"><i class="bi bi-telephone me-2"></i> +20 112 555 6677</p>
+                <a href="#" class="btn btn-outline-dark btn-sm mt-3">Get Directions</a>
+            </div>
+        </div>
+    </div>-->
+    <!-- Showroom 3 -->
+    <!--<div class="col-md-6 col-lg-4">
+                    <div class="showroom-card shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="assets/images/showroom-giza.jpg" class="w-100 showroom-img" alt="Giza Showroom">
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-2">Giza Showroom</h5>
+                            <p class="text-muted small mb-3">9 Faisal Street, El Haram</p>
+                            <p class="text-muted mb-1"><i class="bi bi-telephone me-2"></i> +20 113 999 8811</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm mt-3">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>-->
     <!-- CART DRAWER (Right Side) -->
     <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
         <div class="offcanvas-header">
@@ -466,21 +493,6 @@
         });
     </script>
     <!--cart-->
-    <script>
-        // Example quantity buttons logic
-        document.querySelectorAll('.increment').forEach(btn => {
-            btn.addEventListener('click', () => {
-                let input = btn.parentElement.querySelector('.qty-input');
-                input.value = parseInt(input.value) + 1;
-            });
-        });
-        document.querySelectorAll('.decrement').forEach(btn => {
-            btn.addEventListener('click', () => {
-                let input = btn.parentElement.querySelector('.qty-input');
-                if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
-            });
-        });
-    </script>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- bootstrap -->

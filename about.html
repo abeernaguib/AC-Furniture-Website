@@ -21,6 +21,7 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+   
 </head>
 <body>
     <!-- ===== MAIN HEADER ===== -->
@@ -245,78 +246,129 @@
             </ul>
         </div>
     </div>
-
-    <!-- Cart Items section -->
-    <section class="cart-page-section py-5">
-        <div class="container">
-            <h1 class="mb-4">Your Shopping Cart</h1>
-
-            <div class="table-responsive">
-                <table class="table cart-table align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example cart item row -->
-                        <tr>
-                            <td class="product-info d-flex align-items-center">
-                                <a href="product.html" class="pe-3"><img src="assets/images/livingRoom-01.jpg" alt="Product" class="product-thumb"></a>
-                                <div>
-                                    <a href="product.html" class="product-title">Modern Lamp</a><br>
-                                    <span class="text-muted">Color: Walnut</span>
-                                </div>
-                            </td>
-                            <td class="product-price">€89.00</td>
-                            <td>
-                                <div class="input-group quantity-selector" style="max-width: 120px;">
-                                    <button class="btn btn-outline-secondary decrement" type="button">−</button>
-                                    <input type="number" class="form-control text-center qty-input" value="1" min="1">
-                                    <button class="btn btn-outline-secondary increment" type="button">+</button>
-                                </div>
-                            </td>
-                            <td class="product-total">€89.00</td>
-                            <td class="text-end">
-                                <button class="btn btn-sm btn-outline-light remove-item"><i class="bi bi-trash"></i></button>
-                            </td>
-                        </tr>
-                        <!-- Repeat for additional items -->
-                    </tbody>
-                </table>
+    <!-- Breadcrumb section -->
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about">
+            <div class="container py-5">
+                <div class="w3breadcrumb-gids text-center py-sm-5 py-4">
+                    <div class="w3breadcrumb-info">
+                        <h2 class="w3ltop-title">About Us</h2>
+                    </div>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><span class="fas fa-angle-right mx-2"></span>Living Rooms</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
+    <!-- Breadcrumb section -->
 
-            <div class="row justify-content-end">
-                <div class="col-lg-5">
-                    <div class="cart-summary p-4 bg-light rounded">
-                        <h4 class="mb-3">Order Summary</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="summary-text">Subtotal</span>
-                            <span class="fw-bold summary-text">€89.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-4">
-                            <span class="summary-text">Shipping</span>
-                            <span class="fw-bold summary-text">€0.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="fw-bold summary-text">Total</span>
-                            <span class="display-6 fw-bold">€89.00</span>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <a href="checkout.html" class="btn btn-primary-custom">Checkout</a>
-                            <a href="AcFurnitureHome.html" class="btn btn-outline-custom">Continue Shopping</a>
-                        </div>
+    <section class="about-page">
+
+        <!-- Our Story Section -->
+        <div class="story-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 pe-lg-5">
+                        <img src="assets/images/our-workshop.jpg" alt="Our Workshop" class="img-fluid rounded-3">
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="fw-semibold">Our Story</h2>
+                        <p>
+                            At AC Furniture, we take pride in producing high-quality furniture and wood products that meet the latest design trends and international standards.
+
+                            We understand that every project is unique, and we offer tailored solutions to meet our clients’ specifications. Our team is dedicated to excellence in every piece of furniture we craft.
+                        </p>
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>
-    <!-- // Cart Items section -->
+        </section>
+        <!-- Our Values Section -->
+        <section class="values-section py-5 text-center text-md-start">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5 text-uppercase">Our Values</h2>
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Value Item -->
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <img src="assets/images/home_designed.jpg" alt="Quality & Craftsmanship" class="img-fluid rounded-3 mb-3">
+                            <h5 class="fw-bold">Quality & Craftsmanship</h5>
+                            <p class="text-muted mb-0">
+                                We take pride in offering furniture made with precision, using
+                                high-quality materials that last for years.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <img src="assets/images/team-hands.jpg" alt="Design" class="img-fluid rounded-3 mb-3">
+                            <h5 class="fw-bold">Design & Innovation</h5>
+                            <p class="text-muted mb-0"> Our team constantly explores creative ideas to deliver furniture that’s both modern and functional.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <img src="assets/images/home_designed.jpg" alt="People & Environment" class="img-fluid rounded-3 mb-3">
+                            <h5 class="fw-bold">People & Environment</h5>
+                            <p class="text-muted mb-0">  We care about our customers, our community, and our planet — creating positive impact for future generations.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="branches-section py-5">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5 text-uppercase">Our Branches</h2>
+
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Branch 1 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="branch-card p-4 rounded-4 shadow-sm h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Main Office</h5>
+                            <p class="text-muted mb-2">4 Mahmoud El-Meligy Street - Nasr City - Cairo</p>
+                            <p class="text-muted mb-0"><i class="bi bi-telephone me-2"></i> +20 111 222 3333</p>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="branch-card p-4 rounded-4 shadow-sm h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Factories</h5>
+                            <p class="text-muted mb-2">Kilometer 47, Cairo/Ismailia Desert Road - 10th of Ramadan</p>
+                            <p class="text-muted mb-0"><i class="bi bi-telephone me-2"></i> +20 112 555 6677</p>
+                        </div>
+                    </div>
+
+                    <!-- Branch 3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="branch-card p-4 rounded-4 shadow-sm h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Showroom</h5>
+                            <p class="text-muted mb-2">Building No. 8, Panorama Al Jabal Al Akhdar Compound - Autostrad Road - Cairo</p>
+                            <p class="text-muted mb-0"><i class="bi bi-telephone me-2"></i> +20 113 999 8811</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     <!-- CART DRAWER (Right Side) -->
     <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
         <div class="offcanvas-header">
@@ -466,21 +518,6 @@
         });
     </script>
     <!--cart-->
-    <script>
-        // Example quantity buttons logic
-        document.querySelectorAll('.increment').forEach(btn => {
-            btn.addEventListener('click', () => {
-                let input = btn.parentElement.querySelector('.qty-input');
-                input.value = parseInt(input.value) + 1;
-            });
-        });
-        document.querySelectorAll('.decrement').forEach(btn => {
-            btn.addEventListener('click', () => {
-                let input = btn.parentElement.querySelector('.qty-input');
-                if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
-            });
-        });
-    </script>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- bootstrap -->

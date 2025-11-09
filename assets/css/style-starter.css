@@ -10497,7 +10497,279 @@ html[xmlns] .flexslider .slides {
     }
 }
 /*-- //  products collection styles*/
+/* Section Titles */
+.story-section h2,
+.values-section h2,
+.branches-section h2 {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 2.2rem; /* larger title font */
+}
 
+
+/* Story Section */
+.story-section p {
+    font-size: 1.1rem; /* larger paragraph font */
+    color: #333;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}
+
+.values-section {
+    background-color: #f8f8f8;
+}
+
+.value-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .value-card h5 {
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+        font-size: 1.1rem; /* larger paragraph font */
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .value-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+.branches-section {
+    background-color: #ffffff;
+    margin-top: 60px;
+}
+
+    .branches-section h2 {
+        font-size: 2.2rem;
+        color: var(--primary);
+        letter-spacing: 0.5px;
+    }
+
+.branch-card {
+    background: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+    .branch-card:hover {
+        transform: translateY(-5px);
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .branch-card h5 {
+        color: var(--dark);
+        font-size: 1.2rem;
+    }
+
+    .branch-card p {
+        font-size: 1.1rem; /* larger paragraph font */
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .branch-card .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ffe8cc;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1.6rem;
+    }
+
+/* Responsive Fix */
+@media (max-width: 767px) {
+
+    .story-section .col-lg-6 img {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Hero Section */
+/* ===== Hero Section ===== */
+.showroom-hero {
+    position: relative;
+    background: url("../images/showroom_bg.jpg") center/cover no-repeat;
+    height: 100vh;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+    .showroom-hero .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .showroom-hero .content {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+    }
+
+    .showroom-hero h1 {
+        font-size: 60px;
+        line-height: 100px;
+        font-weight: 700;
+        color: var(--primary);
+        text-shadow: 1px 1px 7px #151212;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .showroom-hero p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        opacity: 0.9;
+        text-shadow: 1px 1px 7px #151212;
+    }
+
+/* ===== Showroom Cards ===== */
+/* ===== Showroom Card ===== */
+.showroom-card {
+    background: #fff;
+    transition: all 0.4s ease;
+    border: 1px solid #e9ecef;
+}
+
+    .showroom-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+    }
+
+.showroom-img {
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.showroom-card:hover .showroom-img {
+    transform: scale(1.07);
+}
+
+.showroom-card p {
+    font-size: 1.1rem; /* larger than default */
+    line-height: 1.6; /* improves readability */
+    color: #555; /* optional: elegant muted color */
+    margin-bottom: 0.8rem;
+}
+
+/* ===== Section Title ===== */
+.showrooms-section .section-title {
+    color: #222;
+    font-size: 2.2rem;
+    letter-spacing: 1.2px;
+    border-bottom: 4px solid #d1a054;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.showrooms-section p {
+    font-size: 1.3rem; /* larger than default */
+    line-height: 1.6; /* improves readability */
+    color: #555; /* optional: elegant muted color */
+    margin-bottom: 0.8rem;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .showroom-hero {
+        height: 60vh;
+    }
+
+        .showroom-hero h1 {
+            font-size: 45px;
+        }
+
+        .showroom-hero p {
+            font-size: 1.2rem;
+        }
+}
+
+/* ===== Multiple Scroll Down Arrows ===== */
+.showrooms-section .scroll-down-multiple {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    cursor: pointer;
+}
+
+    .showrooms-section .scroll-down-multiple i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        animation: arrow-fade 1.5s infinite;
+        margin-top: 0px; /* spacing between arrows */
+        line-height: 1; /* remove default line height */
+        display: block; /* ensure proper stacking */
+        padding: 0; /* remove any internal padding */
+    }
+
+        /* Remove margin from the first arrow */
+        .showrooms-section .scroll-down-multiple i:first-child {
+            margin-top: 0;
+        }
+
+        .showrooms-section .scroll-down-multiple i:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .showrooms-section .scroll-down-multiple i:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+@keyframes arrow-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Optional hover effect */
+.showrooms-section .scroll-down-multiple:hover i {
+    color: #fff;
+}
 
 /* Prizes --  literate-liberty */
     /**
