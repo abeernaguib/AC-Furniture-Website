@@ -10422,7 +10422,7 @@ html[xmlns] .flexslider .slides {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    height: 320px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10448,7 +10448,7 @@ html[xmlns] .flexslider .slides {
 /* ===== Image ===== */
 .category-image {
     width: 100%;
-    height: 200px;
+    /*height: 200px;*/
     object-fit: contain;
     margin-top: auto;
     transition: transform 0.3s ease-in-out;
