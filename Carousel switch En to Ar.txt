@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- default English -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owl Carousel RTL / LTR Switch</title>
+
+  <!-- Bootstrap (optional for styling) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      direction: ltr;
+      transition: direction 0.3s ease;
+    }
+
+    html[lang="ar"] body {
+      direction: rtl;
+    }
+
+    .lang-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-name {
+      margin-top: 10px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language switch -->
+  <div class="lang-switcher">
+    <button class="btn btn-outline-dark" id="to-en">English</button>
+    <button class="btn btn-outline-dark" id="to-ar">عربي</button>
+  </div>
+
+  <!-- ===== PRODUCTS CAROUSEL ===== -->
+  <section class="products-carousel py-5">
+    <div class="container">
+      <h3 class="mb-4 text-center fw-bold">Bedroom Collection</h3>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item text-center">
+          <img src="https://via.placeholder.com/300x200?text=Bed+1" alt="">
+          <div class="product-name">Product 1</div>
+        </div>
+        <div class="item text-center">
+          <img src="https://via.placeholder.com/300x200?text=Bed+2" alt="">
+          <div class="product-name">Product 2</div>
+        </div>
+        <div class="item text-center">
+          <img src="https://via.placeholder.com/300x200?text=Bed+3" alt="">
+          <div class="product-name">Product 3</div>
+        </div>
+        <div class="item text-center">
+          <img src="https://via.placeholder.com/300x200?text=Bed+4" alt="">
+          <div class="product-name">Product 4</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery + Owl Carousel JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    // Function to init carousel
+    function initCarousel(isRTL) {
+      $(".owl-carousel").owlCarousel("destroy"); // destroy existing
+      $(".owl-carousel").owlCarousel({
+        loop: false,
+        margin: 15,
+        nav: true,
+        dots: true,
+        autoplay: false,
+        rtl: isRTL, // switch direction
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          992: { items: 4 },
+          1200: { items: 5 }
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      // Detect initial language
+      const isRTL = $("html").attr("lang") === "ar";
+      initCarousel(isRTL);
+
+      // Switch to English
+      $("#to-en").click(function () {
+        $("html").attr("lang", "en");
+        $("body").css("direction", "ltr");
+        initCarousel(false);
+      });
+
+      // Switch to Arabic
+      $("#to-ar").click(function () {
+        $("html").attr("lang", "ar");
+        $("body").css("direction", "rtl");
+        initCarousel(true);
+      });
+    });
+  </script>
+</body>
+</html>
